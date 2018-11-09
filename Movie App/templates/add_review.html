@@ -1,0 +1,36 @@
+{% extends 'user_base.html' %}
+
+{% block content %}
+  <div class="container jumbotron" style="margin-top:50px">
+
+<form method="post">
+  <h3 align="center"> Review Form</h3>
+
+<div class="form-group">
+  <label for="exampleInputEmail1">Name : </label>
+  {{name}}
+</div>
+
+<div class="form-group">
+  <label for="exampleInputEmail1"> Movie Name : </label>
+  <input type="name" class="form-control" placeholder="Movie Name" name="movie">
+</div>
+
+<div class="form-group">
+  <label for="exampleInputEmail1"> Review (1-10) : </label>
+  <input type="number" class="form-control" placeholder="Ratings (1-10)" name="rating">
+</div>
+
+
+<div class="form-group">
+  <label for="exampleInputEmail1"> Comment : </label>
+  <textarea type="name" class="form-control" placeholder="comment" name="comment"></textarea>
+</div>
+
+
+<button type="submit" class="btn btn-primary btn-block">Submit</button>
+</form>
+
+  </div>
+
+{% endblock %}

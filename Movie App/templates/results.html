@@ -1,0 +1,24 @@
+{% extends 'user_base.html' %}
+
+{% block content %}
+
+<div class="container jumbotron" style="margin-top:50px;">
+    <img src="http://image.tmdb.org/t/p/w185{{image}}"> <br>
+    Title : {{ title }} <br>
+    Summary : {{ summary }} <br>
+    Rating : {{ rating }} <br>
+    Date : {{ date }} <br>
+    Cast :
+    {% for character in chars %}
+    {{ character }},
+    {% endfor %}
+    and more <br>
+
+    Comments : <br>
+    {% for comments in comm %}
+    {{ comments }} <br>
+    {% endfor %}
+
+</div>
+
+{% endblock %}
